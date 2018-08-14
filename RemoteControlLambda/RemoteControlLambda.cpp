@@ -25,13 +25,3 @@ void RemoteControlLambda::OffButtonWasPushed(int slot) const
 {
     offCommands.at(slot)();
 }
-
-std::ostream &operator<<(std::ostream &stream, const RemoteControlLambda &remote)
-{
-    stream << "------- Remote Control -------";
-    for (int i = 0; i < 7; i++)
-    {
-        // Lambda commands don't have a name field, so this isn't implemented.
-    }
-    return stream;
-}

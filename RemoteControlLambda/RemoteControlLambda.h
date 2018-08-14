@@ -13,9 +13,6 @@ public:
   void OffButtonWasPushed(int slot) const;
 
 private:
-  friend std::ostream &operator<<(std::ostream &, const RemoteControlLambda &);
-
-private:
   std::vector<std::function<void()>> onCommands;
   std::vector<std::function<void()>> offCommands;
 };
